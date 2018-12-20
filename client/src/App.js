@@ -87,12 +87,12 @@ class App extends Component {
   // our update method that uses our backend api
   // to overwrite existing data base information
   updateDB = (idToUpdate, updateToApply) => {
-    console.log(`We updated the database with ${idToUpdate} and ${updateToApply}`);
     let objIdToUpdate = null;
     this.state.data.forEach(dat => {
       if (dat.id == idToUpdate) {
         objIdToUpdate = dat.id;
       }
+      console.log(`We updated the database with ${idToUpdate} and ${updateToApply}`);
     });
 
     axios.post("/api/updateData", {
