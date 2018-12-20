@@ -69,7 +69,7 @@ class App extends Component {
   deleteFromDB = idToDelete => { 
     let objIdToDelete = null;
     this.state.data.forEach(dat => {
-      if (dat.id === idToDelete) {
+      if (dat.id === Number(idToDelete)) {
         objIdToDelete = dat.id;
       }
     });
